@@ -16,7 +16,7 @@ This project is for educational porpuses only. Pull request are welcome, but pri
 Site published at: https://laurynaskl.github.io/project-task-management/
 
 
-<!-- Design: [](#) -->
+Design: [First](https://dribbble.com/shots/17246001/attachments/12352583?mode=media)
 
 
 ## 🎯 Project features/goals
