@@ -1,0 +1,17 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    box-shadow: 0 4px 8px #0003;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+.main-header > .logo{
+
+}
+.main-header > .btn{
+
+}
