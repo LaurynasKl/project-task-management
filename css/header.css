@@ -14,4 +14,9 @@
 }
 .main-header > .btn{
 
+}@media print {
+    .main-header{
+        /* display: none; */
+        background-color: red;
+    }
 }

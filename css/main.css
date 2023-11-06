@@ -17,6 +17,9 @@ body {
     align-items: center;
 }
 
+.main-content > section{
+    width: 100%;
+}
 .main-content > div{
     width: 800px;
     font-size: 30px;
@@ -39,9 +42,4 @@ body {
         width: 100%;
         font-size: 15px;
     }
-}
-
-
-@media print {
-
 }
