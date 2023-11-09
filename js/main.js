@@ -50,9 +50,6 @@ if(formDOM){
                 .split(',')
                 .filter(txt => txt !== '')
                 .map(txt => ({text: txt.trim(), color: '#333'})),
-            // tags: [
-            //     {text: 'Design', color: '#333'}
-            // ]
 
         });
         

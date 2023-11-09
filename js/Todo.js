@@ -13,6 +13,8 @@ export class Todo{
     init(){
         this.updateDOMelement();
         this.render();
+
+        this.loadInitialData();
     }
     updateDOMelement(){
         if(typeof this.selector !== 'string' || this.selector === ''){
@@ -38,21 +40,15 @@ export class Todo{
 
         this.columnsDOM = this.DOM.querySelectorAll('.task-list');
     }
-    addTask(task){
-        
-        this.tasks.push({
-            ...task,
-            isDeleted: false,
-        });
-        const taskID = ++this.lastUsedTaskId;
 
+    taskCardHTML(){
         let tagsHTML = '';
 
         for(const tag of task.tags){
             tagsHTML += `<div class="tag" style="color: ${tag.color};">${tag.text}</div>`;
         }
 
-        const HTML = `
+        return `
         <li id="task_${taskID}" class="task-card">
             <div class="task-action">
             <button class="fa fa-trash"></button>
@@ -62,10 +58,26 @@ export class Todo{
             <div class="task-tags">${tagsHTML}</div>
             <div class="task-deadline">${task.deadline}</div>
         </li>`;
+    }
 
+
+
+    addTask(task){
+        this.renderTask(task);
+        localStorage.setItem('46g-tasks-list', JSON.stringify(this.tasks));
+        
+    }
+    
+    renderTask(){
+        const taskID = ++this.lastUsedTaskId;
+        this.tasks.push({
+            ...task,
+            isDeleted: false,
+        });
+        
         // this.columnsDOM[task.columnIndex].innerHTML += HTML;
-        this.columnsDOM[task.columnIndex].insertAdjacentHTML('beforeend', HTML);
-
+        this.columnsDOM[task.columnIndex].insertAdjacentHTML('beforeend', this.taskCardHTML(taskID, task));
+    
         const taskDOM = document.getElementById(`task_${taskID}`);
         const deleteButtonDOM = taskDOM.querySelector(`.fa-trash`)
         
@@ -73,5 +85,15 @@ export class Todo{
             this.tasks[taskID - 1].isDeleted = true;
             taskDOM.remove();
         });
-    };
+
+    }
+
+    loadInitialData(){
+        const localData = localStorage.getItem('46g-task-list');
+        const data = JSON.parse(localData);
+
+        for(const task of data){
+            this.renderTask(task);
+        }
+    }
 }
