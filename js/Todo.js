@@ -39,6 +39,7 @@ export class Todo{
         this.columnsDOM = this.DOM.querySelectorAll('.task-list');
     }
     addTask(task){
+        
         this.tasks.push({
             ...task,
             isDeleted: false,

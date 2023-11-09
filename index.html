@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/todo.css">
     <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" href="./css/form.css">
 </head>
 <body>
     <header class="main-header">
@@ -36,14 +37,28 @@
                     <button type="button" class="fa fa-times"></button>
                 </header>
                 <div class="aside-content">
-                    CONTENT
+                    <form id="task-form" class="form">
+                        <div class="form-row">
+                            <label class="label" for="title">Title</label>
+                            <input id="title" class="input" type="text" name="title" required>
+                        </div>
+                        <div class="form-row">
+                            <label class="label" for="desc">Description</label>
+                            <textarea id="desc" class="textarea" name="description"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <label class="label" for="deadline">Deadline</label>
+                            <input id="deadline" class="input" type="text" name="deadline">
+                        </div>
+                        <div class="form-row">
+                            <label class="label" for="tags">Tags</label>
+                            <input id="tags" class="input" type="text" name="tags">
+                        </div>
+                        <button class="btn" type="submit">Create task</button>
+                    </form>
                 </div>
             </div>
         </aside>
-
-        <!-- <section class="about">
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis facere architecto magnam. Pariatur amet illo voluptatum quibusdam veritatis dolore aut molestias culpa sapiente nesciunt voluptas maxime, dignissimos, ad itaque sunt odio adipisci, aspernatur nam? Esse quasi et nesciunt maiores! Voluptates dignissimos animi similique tenetur atque eveniet vero quam odio tempore explicabo repellendus magnam id, cum aspernatur est maxime optio. Necessitatibus placeat reiciendis nulla sequi odit aut ullam vero totam quis voluptatibus quos dicta, minus officiis id, adipisci alias vel magni laborum quasi ipsam accusantium architecto eius nobis? Ipsam, minus deserunt nesciunt quas corrupti mollitia. Nobis delectus aliquid possimus sit voluptatem id laboriosam corrupti distinctio omnis eos perferendis, temporibus pariatur accusamus quisquam quidem. Nisi unde minima quaerat pariatur ex. Delectus, modi qui! Veniam id necessitatibus laborum culpa quis, maxime sed quos saepe officia aliquam facilis iure! Ipsam saepe quaerat reprehenderit, veritatis recusandae velit voluptate. Accusamus doloribus sit aspernatur enim tempore rem, quae eaque alias beatae sequi iusto. Autem repudiandae exercitationem quae architecto repellendus in possimus sequi facere quod sed mollitia sint quisquam minus itaque, maiores beatae libero vitae adipisci voluptatibus laborum blanditiis! Odio unde dolorum, iste, distinctio tempore aperiam totam impedit natus maiores sequi nulla libero quibusdam? Omnis numquam aut ad.</div>
-        </section> -->
 
     </main>
 

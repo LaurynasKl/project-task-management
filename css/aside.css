@@ -55,8 +55,9 @@
     color: #333;
 }
 
-.aside .fa-content{
-
+.aside .aside-content{
+    max-height: calc(100vh - 8rem);
+    overflow: auto;
 }
 
 @media (max-width: 30rem) {
