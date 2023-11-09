@@ -34,7 +34,7 @@
 }
 
 .task-card .task-action{
-    /* display: none; */
+    display: none;
     display: flex;
     position: absolute;
     gap: 1rem;
